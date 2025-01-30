@@ -23,3 +23,32 @@ Welcome to **JavaCorePractice**! This repository is dedicated to practicing and 
   ```java
   int age = 25; // Declaring and initializing an integer variable
   String name = "John"; // Declaring and initializing a String variable
+
+### 2. User Input (Scanner)
+- **What is Scanner?**
+  - The `Scanner` class is used to read input from the user.
+  - It is part of the `java.util` package.
+- **How to Use Scanner:**
+  - Import the `Scanner` class: `import java.util.Scanner;`
+  - Create a `Scanner` object: `Scanner scanner = new Scanner(System.in);`
+  - Use methods like `nextInt()`, `nextDouble()`, `nextLine()`, etc., to read input.
+- **Example:**
+  ```java
+  import java.util.Scanner;
+
+  public class Main {
+      public static void main(String[] args) {
+          Scanner scanner = new Scanner(System.in);
+
+          System.out.print("Enter your name: ");
+          String name = scanner.nextLine();
+
+          System.out.print("Enter your age: ");
+          int age = scanner.nextInt();
+
+          System.out.println("Hello, " + name + "! You are " + age + " years old.");
+
+          scanner.close(); // Always close the scanner to avoid resource leaks
+      }
+  }
+  ```' >> README.md
