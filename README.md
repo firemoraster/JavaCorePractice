@@ -24,7 +24,7 @@ Welcome to **JavaCorePractice**! This repository is dedicated to practicing and 
   int age = 25; // Declaring and initializing an integer variable
   String name = "John"; // Declaring and initializing a String variable
 
-echo '### 2. User Input (Scanner)
+### 2. User Input (Scanner)
 - **What is Scanner?**
   - The `Scanner` class is used to read input from the user.
   - It is part of the `java.util` package.
