@@ -1,30 +1,17 @@
 package org.mooneiko;
 
+import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
 
-        System.out.println("Hello, World!"); // simple println
-        System.out.print("it's really good!\n"); // print with \n as new line
-        /*
-        System.out.print("Let's create a new world together!");
-        multi-line comment
-         */
-        System.out.println("it's really good!");
+        Scanner sc = new Scanner(System.in);
 
-        Variables variables = new Variables();
+        System.out.print("Enter your name: ");
+        String name = sc.next();
 
-        System.out.println("The value is " + variables.value);
-        System.out.println("$" + variables.price);
-        System.out.println("The grade is " + variables.grade);
-        System.out.println(variables.isStudent + "\n" + variables.forSale + "\n" + variables.isOnline);
+        System.out.println("Hello "+ name);
 
-        if (variables.isStudent) {
-            System.out.println("You are a Student");
-        } else {
-            System.out.println("You are not a Student");
-
-        }
-
+        sc.close();
     }
 }

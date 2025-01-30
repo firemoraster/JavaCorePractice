@@ -8,6 +8,7 @@ public class Variables {
     //declaration
     int quantity = 21;
     int value = 100;
+    int year = 2000;
 
 
     // double variable
@@ -30,7 +31,51 @@ public class Variables {
     boolean isOnline = true;
 
 
-    // condition statement
+    String name = "Vitaly";
+    String food = "pizza";
+    String email = "vitaly@gmail.com";
+    String car = "Pegout";
+    String color = "green";
 
+
+    // homework
+    String nameofteach = "Bro Code";
+    int gta = 6;
+    double pi = 3.14159;
+    char gender = 'M';
+    boolean isAdmin = true;
+
+
+    /*
+      System.out.println("Hello, World!"); // simple println
+        System.out.print("it's really good!\n"); // print with \n as new line
+
+        System.out.print("Let's create a new world together!");
+        multi-line comment
+
+        System.out.println("it's really good!");
+
+    Variables variables = new Variables();
+
+        System.out.println("The value is " + variables.value);
+        System.out.println("$" + variables.price);
+        System.out.println("The grade is " + variables.grade);
+        System.out.println(variables.isStudent + "\n" + variables.forSale + "\n" + variables.isOnline);
+
+        if (variables.isStudent) {
+        System.out.println("You are a Student");
+    } else {
+        System.out.println("You are not a Student");
+
+    }
+
+        System.out.println(variables.name);
+        System.out.println("Hello,"+variables.name);
+        System.out.println("Your emails : "+variables.email);
+        System.out.println("Your gpa is : "+variables.gpa);
+
+        System.out.println("Your choice is a "+ variables.color+" "+variables.year+" "+variables.car);
+
+     */
 
 }
