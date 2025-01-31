@@ -51,4 +51,4 @@ Welcome to **JavaCorePractice**! This repository is dedicated to practicing and 
           scanner.close(); // Always close the scanner to avoid resource leaks
       }
   }
-  ```' >> README.md
+  ```
