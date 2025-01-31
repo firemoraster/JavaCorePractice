@@ -52,7 +52,7 @@ Welcome to **JavaCorePractice**! This repository is dedicated to practicing and 
       }
   }
   ```
-  ### 3. Mad Libs Game (Using Scanner)
+### 2.1 Mad Libs Game (Using Scanner)
 - **What is the Mad Libs Game?**
   - Mad Libs is a word game where users provide random words to fill in the blanks in a story.
   - It helps practice string input handling in Java.
