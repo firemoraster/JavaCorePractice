@@ -76,6 +76,21 @@ public class Variables {
 
         System.out.println("Your choice is a "+ variables.color+" "+variables.year+" "+variables.car);
 
+
+        double width = 0;
+        double height = 0;
+        double area = 0;
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the width of the rectangle: ");
+        width = scanner.nextDouble();
+        System.out.print("Enter the height of the rectangle: ");
+        height = scanner.nextDouble();
+
+        area = width * height;
+        System.out.println("The area of the rectangle is " + area);
+        scanner.close();
+
      */
 
 }
