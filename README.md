@@ -10,6 +10,14 @@ Welcome to **JavaCorePractice**! This repository is dedicated to practicing and 
 
 ---
 
+
+## 📑 Table of Contents
+
+- [1. Variables](#1-variables)
+- [2. User Input (Scanner)](#2-user-input-scanner)
+  - [2.1 Mad Libs Game (Using Scanner)](#21-mad-libs-game-using-scanner)
+- [3. Arithmetic](#3-arithmetic)
+
 ## 📚 Topics Covered
 
 ### 1. Variables
