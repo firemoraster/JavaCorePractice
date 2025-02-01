@@ -10,6 +10,14 @@ Welcome to **JavaCorePractice**! This repository is dedicated to practicing and 
 
 ---
 
+
+## 📑 Table of Contents
+
+- [1. Variables](#1-variables)
+- [2. User Input (Scanner)](#2-user-input-scanner)
+  - [2.1 Mad Libs Game (Using Scanner)](#21-mad-libs-game-using-scanner)
+- [3. Arithmetic](#3-arithmetic)
+
 ## 📚 Topics Covered
 
 ### 1. Variables
@@ -81,3 +89,82 @@ Welcome to **JavaCorePractice**! This repository is dedicated to practicing and 
       }
   }
 
+### 3. Arithmetic
+- **Arithmetic Operations in Java:**
+  - Java supports basic arithmetic operations such as addition (`+`), subtraction (`-`), multiplication (`*`), division (`/`), and modulus (`%`).
+- **Examples of Arithmetic Operations:**
+  ```java
+  package org.mooneiko;
+
+  public class Arithmetic {
+      public static void main(String[] args) {
+          // Basic Arithmetic Operations
+          int x = 10;
+          int y = 2;
+          int z;
+
+          // Addition
+          z = x + y;
+          System.out.println("Addition: " + z);
+
+          // Subtraction
+          z = x - y;
+          System.out.println("Subtraction: " + z);
+
+          // Multiplication
+          z = x * y;
+          System.out.println("Multiplication: " + z);
+
+          // Division
+          z = x / y;
+          System.out.println("Division: " + z);
+
+          // Modulus
+          z = x % y;
+          System.out.println("Modulus: " + z);
+
+          // Augmented Assignment Operators
+          x = 10; // reset x
+          System.out.println("\nUsing Augmented Assignment Operators:");
+          x += y; // x = x + y
+          System.out.println("x += y: " + x);
+
+          x = 10; // reset x
+          x -= y; // x = x - y
+          System.out.println("x -= y: " + x);
+
+          x = 10; // reset x
+          x *= y; // x = x * y
+          System.out.println("x *= y: " + x);
+
+          x = 10; // reset x
+          x /= y; // x = x / y
+          System.out.println("x /= y: " + x);
+
+          x = 10; // reset x
+          x %= y; // x = x % y
+          System.out.println("x %= y: " + x);
+
+          // Increment and Decrement Operators
+          int a = 1;
+          System.out.println("\nIncrement Operators:");
+          System.out.println("Initial a: " + a);
+          a++; // Post-increment
+          System.out.println("a++: " + a);
+          ++a; // Pre-increment
+          System.out.println("++a: " + a);
+
+          int b = 3;
+          System.out.println("\nDecrement Operators:");
+          System.out.println("Initial b: " + b);
+          b--; // Post-decrement
+          System.out.println("b--: " + b);
+          --b; // Pre-decrement
+          System.out.println("--b: " + b);
+
+          // Order of operations (PEMDAS: Parentheses, Exponents, Multiplication/Division, Addition/Subtraction)
+          double result = 3 + 4 * (7 - 5) / 2.0;
+          System.out.println("\nResult of Order of Operations (PEMDAS): " + result);
+      }
+  }
+  ```
