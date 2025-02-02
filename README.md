@@ -17,6 +17,7 @@ Welcome to **JavaCorePractice**! This repository is dedicated to practicing and 
 - [2. User Input (Scanner)](#2-user-input-scanner)
   - [2.1 Mad Libs Game (Using Scanner)](#21-mad-libs-game-using-scanner)
 - [3. Arithmetic](#3-arithmetic)
+  - [3.1 Shopping Cart Program] (#31-shopping-cart-program)
 
 ## 📚 Topics Covered
 
@@ -168,3 +169,46 @@ Welcome to **JavaCorePractice**! This repository is dedicated to practicing and 
       }
   }
   ```
+
+  ### 3.1 Shopping Cart Program
+- **What is the Shopping Cart Program?**
+  - This program simulates a simple shopping cart where users can input the item they want to buy, its price, and the quantity. The program then calculates the total cost and displays the result.
+  - It helps practice user input handling, arithmetic operations, and string formatting in Java.
+
+- **How It Works:**
+  1. The program uses the `Scanner` class to take user input for the item name, price, and quantity.
+  2. It calculates the total cost by multiplying the price by the quantity.
+  3. Finally, it displays the item details and the total cost in a user-friendly format.
+
+- **Code Example:**
+  ```java
+  import java.util.Scanner;
+
+  public class ShoppingCart {
+      public static void main(String[] args) {
+          Scanner sc = new Scanner(System.in);
+
+          String item;
+          double price;
+          int quantity;
+          char currency = '$';
+          double total;
+
+          System.out.print("What item would you like to buy? ");
+          item = sc.nextLine();
+
+          System.out.print("What is the price for each?: ");
+          price = sc.nextDouble();
+
+          System.out.print("How many items would you like to buy? ");
+          quantity = sc.nextInt();
+
+          total = price * quantity;
+
+          System.out.print("\n");
+          System.out.print("\n You have bought " + quantity + " items of " + item + "");
+          System.out.print("\n Your total is " + currency + total);
+
+          sc.close();
+      }
+  }
