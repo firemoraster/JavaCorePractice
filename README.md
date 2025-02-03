@@ -18,7 +18,7 @@ Welcome to **JavaCorePractice**! This repository is dedicated to practicing and 
   - [2.1 Mad Libs Game (Using Scanner)](#21-mad-libs-game-using-scanner)
 - [3. Arithmetic](#3-arithmetic)
   - [3.1 Shopping Cart Program](#31-shopping-cart-program)
-
+- [4. If Statements](#4-if-statements)
 ## 📚 Topics Covered
 
 ### 1. Variables
@@ -208,6 +208,72 @@ Welcome to **JavaCorePractice**! This repository is dedicated to practicing and 
           System.out.print("\n");
           System.out.print("\n You have bought " + quantity + " items of " + item + "");
           System.out.print("\n Your total is " + currency + total);
+
+          sc.close();
+      }
+  }
+
+  ### 4. If Statements
+- **What are If Statements?**
+  - If statements are used to perform a block of code only if a specified condition is true.
+  - They allow programs to make decisions based on certain criteria.
+  - You can also use `else if` and `else` to handle multiple conditions.
+
+- **How It Works:**
+  1. The program uses the `Scanner` class to take user input for their name, age, and student status.
+  2. It uses **if statements** to check:
+     - If the name is empty.
+     - The age group of the user (child, adult, senior, etc.).
+     - Whether the user is a student or not.
+  3. Based on the conditions, it displays appropriate messages.
+
+- **Code Example:**
+  ```java
+  import java.util.Scanner;
+
+  public class IfStatements {
+      public static void main(String[] args) {
+          Scanner sc = new Scanner(System.in);
+
+          String name;
+          int age;
+          boolean isStudent;
+
+          System.out.print("Enter your name: ");
+          name = sc.nextLine();
+
+          System.out.print("Enter your age: ");
+          age = sc.nextInt();
+
+          System.out.print("Are you a student? (true/false): ");
+          isStudent = sc.nextBoolean();
+
+          // Group 1: Check if name is empty
+          if (name.isEmpty()) {
+              System.out.println("Name is empty");
+          } else {
+              System.out.println("Name is " + name);
+          }
+
+          // Group 2: Check age group
+          if (age >= 65) {
+              System.out.println("You are a senior!");
+          } else if (age >= 18) {
+              System.out.println("You are an adult!");
+          } else if (age < 0) {
+              System.out.println("You haven't been born yet!");
+          } else if (age == 0) {
+              System.out.println("You are a baby!");
+          } else {
+              System.out.println("You are a child!");
+          }
+
+          // Group 3: Check student status
+          if (isStudent) {
+              System.out.println("You are a student!");
+          } else {
+              System.out.println("You are not a student!");
+          }
 
           sc.close();
       }
