@@ -19,6 +19,8 @@ Welcome to **JavaCorePractice**! This repository is dedicated to practicing and 
 - [3. Arithmetic](#3-arithmetic)
   - [3.1 Shopping Cart Program](#31-shopping-cart-program)
 - [4. If Statements](#4-if-statements)
+- [5. Random Numbers](#5-random-numbers)
+
 ## 📚 Topics Covered
 
 ### 1. Variables
@@ -279,5 +281,54 @@ Welcome to **JavaCorePractice**! This repository is dedicated to practicing and 
           }
 
           sc.close();
+      }
+  }
+
+### 5. Random Numbers
+- **What are Random Numbers?**
+  - Random numbers are used to generate unpredictable values in a program.
+  - In Java, the `Random` class from the `java.util` package is used to generate random numbers.
+  - You can generate random integers, doubles, and booleans using this class.
+
+- **How It Works:**
+  1. The program creates an instance of the `Random` class.
+  2. It generates random integers within a specified range using `nextInt()`.
+  3. It generates random doubles using `nextDouble()`.
+  4. It generates random booleans using `nextBoolean()`.
+
+- **Code Example:**
+  ```java
+  import java.util.Random;
+
+  public class RandomNumbers {
+      public static void main(String[] args) {
+          Random rand = new Random();
+
+          int number;
+          int number1;
+          int number2;
+          int number3;
+          double number4;
+          boolean flag;
+
+          // Generate random integers
+          number = rand.nextInt(1, 6); // Random number between 1 and 5 (inclusive)
+          number1 = rand.nextInt(1, 101); // Random number between 1 and 100
+          number2 = rand.nextInt(1, 101); // Random number between 1 and 100
+          number3 = rand.nextInt(1, 101); // Random number between 1 and 100
+
+          // Generate random double
+          number4 = rand.nextDouble(1, 101); // Random double between 1.0 and 100.0
+
+          // Generate random boolean
+          flag = rand.nextBoolean(); // Random boolean (true or false)
+
+          // Display the results
+          System.out.println("Random number (1-5): " + number);
+          System.out.println("Random number (1-100): " + number1);
+          System.out.println("Random number (1-100): " + number2);
+          System.out.println("Random number (1-100): " + number3);
+          System.out.println("Random double (1.0-100.0): " + number4);
+          System.out.println("Random boolean: " + flag);
       }
   }
