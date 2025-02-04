@@ -20,6 +20,8 @@ Welcome to **JavaCorePractice**! This repository is dedicated to practicing and 
   - [3.1 Shopping Cart Program](#31-shopping-cart-program)
 - [4. If Statements](#4-if-statements)
 - [5. Random Numbers](#5-random-numbers)
+- [6. Math Class](#6-math-class)
+
 
 ## 📚 Topics Covered
 
@@ -332,3 +334,5 @@ Welcome to **JavaCorePractice**! This repository is dedicated to practicing and 
           System.out.println("Random boolean: " + flag);
       }
   }
+
+### 6. Math Class
