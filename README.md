@@ -21,6 +21,8 @@ Welcome to **JavaCorePractice**! This repository is dedicated to practicing and 
 - [4. If Statements](#4-if-statements)
 - [5. Random Numbers](#5-random-numbers)
 - [6. Math Class](#6-math-class)
+- [7. Printf](#7-printf)
+
 
 
 ## 📚 Topics Covered
@@ -434,5 +436,85 @@ Welcome to **JavaCorePractice**! This repository is dedicated to practicing and 
           System.out.printf("Volume of sphere with radius %.1f is %.1f cm³", radius, volume);
           
           sc.close();
+      }
+  }
+
+
+### 7. Printf
+- **What is `printf()`?**
+  - `printf()` is a method used to format output in Java.
+  - It allows you to control the display of strings, numbers, and other data types using **format specifiers**.
+  - The syntax for format specifiers is: `%[flags][width][.precision][specifier-character]`.
+
+- **How It Works:**
+  1. The program uses `printf()` to format and display variables like strings, characters, integers, doubles, and booleans.
+  2. It demonstrates the use of **flags**, **width**, **precision**, and **specifiers** to control the output format.
+  3. It also shows how to format numbers with commas, zero-padding, and alignment.
+
+- **Code Example:**
+  ```java
+  public class PrintfExample {
+      public static void main(String[] args) {
+          // Variables
+          String name = "Spongebob";
+          char firstLetter = 'S';
+          int age = 30;
+          double height = 60.5;
+          boolean isEmployed = true;
+
+          // Basic printf examples
+          System.out.printf("Hello %s\n", name); // String
+          System.out.printf("Your name starts with a %c\n", firstLetter); // Character
+          System.out.printf("Your age is %d\n", age); // Integer
+          System.out.printf("Your height is %.2f\n", height); // Double with 2 decimal places
+          System.out.printf("Your isEmployed is %b\n", isEmployed); // Boolean
+          System.out.printf("%s is %d years old\n", name, age); // Multiple variables
+
+          // Formatting numbers with flags
+          double price1 = 9.99;
+          double price2 = 100.15;
+          double price3 = -54.01;
+
+          System.out.println("+ flag:");
+          System.out.printf("%+.2f\n", price1); // Plus sign for positive numbers
+          System.out.printf("%+.2f\n", price2);
+          System.out.printf("%+.2f\n", price3);
+
+          System.out.println("Space flag:");
+          System.out.printf("% .2f\n", price1); // Space for positive numbers
+          System.out.printf("% .2f\n", price2);
+          System.out.printf("% .2f\n", price3);
+
+          System.out.println(", flag (comma grouping):");
+          price1 = 9000.99;
+          price2 = 100000.15;
+          price3 = -54000.01;
+          System.out.printf("%,.2f\n", price1); // Comma as a thousand separator
+          System.out.printf("%,.2f\n", price2);
+          System.out.printf("%,.2f\n", price3);
+
+          // Zero padding and width
+          int id1 = 1;
+          int id2 = 23;
+          int id3 = 456;
+          int id4 = 7890;
+
+          System.out.println("Zero padding:");
+          System.out.printf("%04d\n", id1); // Zero-padded to 4 digits
+          System.out.printf("%04d\n", id2);
+          System.out.printf("%04d\n", id3);
+          System.out.printf("%04d\n", id4);
+
+          System.out.println("Spaces (right-aligned):");
+          System.out.printf("%4d\n", id1); // Right-aligned in 4 spaces
+          System.out.printf("%4d\n", id2);
+          System.out.printf("%4d\n", id3);
+          System.out.printf("%4d\n", id4);
+
+          System.out.println("Spaces (left-aligned):");
+          System.out.printf("%-4d\n", id1); // Left-aligned in 4 spaces
+          System.out.printf("%-4d\n", id2);
+          System.out.printf("%-4d\n", id3);
+          System.out.printf("%-4d\n", id4);
       }
   }
