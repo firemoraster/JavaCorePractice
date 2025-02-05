@@ -20,6 +20,10 @@ Welcome to **JavaCorePractice**! This repository is dedicated to practicing and 
   - [3.1 Shopping Cart Program](#31-shopping-cart-program)
 - [4. If Statements](#4-if-statements)
 - [5. Random Numbers](#5-random-numbers)
+- [6. Math Class](#6-math-class)
+- [7. Printf](#7-printf)
+
+
 
 ## 📚 Topics Covered
 
@@ -330,5 +334,187 @@ Welcome to **JavaCorePractice**! This repository is dedicated to practicing and 
           System.out.println("Random number (1-100): " + number3);
           System.out.println("Random double (1.0-100.0): " + number4);
           System.out.println("Random boolean: " + flag);
+      }
+  }
+
+### 6. Math Class
+
+- **What is the Math Class?**
+  - The `Math` class in Java provides a collection of static methods and constants to perform common mathematical operations. It includes constants such as `Math.PI` and `Math.E`, and methods for exponentiation, square roots, rounding, and more.
+
+- **Key Methods of the Math Class:**
+  1. **`Math.pow(a, b)`**  
+     - Raises `a` to the power of `b`.
+  2. **`Math.abs(x)`**  
+     - Returns the absolute value of `x`.
+  3. **`Math.sqrt(x)`**  
+     - Computes the square root of `x`.
+  4. **`Math.round(x)`**  
+     - Rounds `x` to the nearest integer.
+  5. **`Math.ceil(x)`**  
+     - Rounds `x` upward to the nearest whole number.
+  6. **`Math.floor(x)`**  
+     - Rounds `x` downward to the nearest whole number.
+  7. **`Math.max(x, y)`**  
+     - Returns the larger of two values.
+  8. **`Math.min(x, y)`**  
+     - Returns the smaller of two values.
+
+- **Practical Examples:**
+  - **Basic Operations:**  
+    The code demonstrates how to calculate powers, absolute values, square roots, and perform various rounding operations.
+  - **Hypotenuse Calculation:**  
+    Using the Pythagorean theorem (`c = Math.sqrt(a^2 + b^2)`), the program calculates the hypotenuse of a right-angled triangle based on user input.
+  - **Circle and Sphere Calculations:**  
+    The code computes:
+    - **Circumference:** `circumference = 2 * Math.PI * radius`
+    - **Area of a Circle:** `area = Math.PI * Math.pow(radius, 2)`
+    - **Volume of a Sphere:** `volume = (4.0/3.0) * Math.PI * Math.pow(radius, 3)`
+
+- **Code Example:**
+  ```java
+  import java.util.Scanner;
+
+  public class MathExamples {
+      public static void main(String[] args) {
+          // Displaying Math constants
+          System.out.println("Value of PI: " + Math.PI);
+          System.out.print("Value of E: " + Math.E);
+          
+          Scanner sc = new Scanner(System.in);
+          double result;
+          double a, b, c;
+
+          // Using various Math methods
+          result = Math.pow(2, 3);
+          System.out.println("\n2^3 = " + result);
+          
+          result = Math.abs(-5);
+          System.out.println("Absolute value of -5: " + result);
+          
+          result = Math.sqrt(9);
+          System.out.println("Square root of 9: " + result);
+          
+          result = Math.round(3.14);
+          System.out.println("3.14 rounded: " + result);
+          
+          result = Math.ceil(3.14);
+          System.out.println("Ceiling of 3.14: " + result);
+          
+          result = Math.floor(3.99);
+          System.out.println("Floor of 3.99: " + result);
+          
+          result = Math.max(10, 20);
+          System.out.println("Maximum of 10 and 20: " + result);
+          
+          result = Math.min(10, 20);
+          System.out.println("Minimum of 10 and 20: " + result);
+
+          // Calculate the hypotenuse using the Pythagorean theorem
+          System.out.print("\nEnter the length of side A: ");
+          a = sc.nextDouble();
+          System.out.print("Enter the length of side B: ");
+          b = sc.nextDouble();
+          c = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
+          System.out.println("Hypotenuse of " + a + " and " + b + " is " + c);
+
+          // Calculate circumference, area, and volume for a circle/sphere
+          double radius, circumference, area, volume;
+          System.out.print("\nEnter the radius: ");
+          radius = sc.nextDouble();
+          
+          // Circumference = 2 * PI * radius
+          circumference = 2 * radius * Math.PI;
+          System.out.printf("Circumference of circle with radius %.1f is %.1f cm\n", radius, circumference);
+          
+          // Area = PI * radius^2
+          area = Math.PI * Math.pow(radius, 2);
+          System.out.printf("Area of circle with radius %.1f is %.1f cm²\n", radius, area);
+          
+          // Volume = (4/3) * PI * radius^3
+          volume = (4.0/3.0) * Math.PI * Math.pow(radius, 3);
+          System.out.printf("Volume of sphere with radius %.1f is %.1f cm³", radius, volume);
+          
+          sc.close();
+      }
+  }
+
+
+### 7. Printf
+- **What is `printf()`?**
+  - `printf()` is a method used to format output in Java.
+  - It allows you to control the display of strings, numbers, and other data types using **format specifiers**.
+  - The syntax for format specifiers is: `%[flags][width][.precision][specifier-character]`.
+
+- **How It Works:**
+  1. The program uses `printf()` to format and display variables like strings, characters, integers, doubles, and booleans.
+  2. It demonstrates the use of **flags**, **width**, **precision**, and **specifiers** to control the output format.
+  3. It also shows how to format numbers with commas, zero-padding, and alignment.
+
+- **Code Example:**
+  ```java
+  public class PrintfExample {
+      public static void main(String[] args) {
+          // Variables
+          String name = "Spongebob";
+          char firstLetter = 'S';
+          int age = 30;
+          double height = 60.5;
+          boolean isEmployed = true;
+
+          // Basic printf examples
+          System.out.printf("Hello %s\n", name); // String
+          System.out.printf("Your name starts with a %c\n", firstLetter); // Character
+          System.out.printf("Your age is %d\n", age); // Integer
+          System.out.printf("Your height is %.2f\n", height); // Double with 2 decimal places
+          System.out.printf("Your isEmployed is %b\n", isEmployed); // Boolean
+          System.out.printf("%s is %d years old\n", name, age); // Multiple variables
+
+          // Formatting numbers with flags
+          double price1 = 9.99;
+          double price2 = 100.15;
+          double price3 = -54.01;
+
+          System.out.println("+ flag:");
+          System.out.printf("%+.2f\n", price1); // Plus sign for positive numbers
+          System.out.printf("%+.2f\n", price2);
+          System.out.printf("%+.2f\n", price3);
+
+          System.out.println("Space flag:");
+          System.out.printf("% .2f\n", price1); // Space for positive numbers
+          System.out.printf("% .2f\n", price2);
+          System.out.printf("% .2f\n", price3);
+
+          System.out.println(", flag (comma grouping):");
+          price1 = 9000.99;
+          price2 = 100000.15;
+          price3 = -54000.01;
+          System.out.printf("%,.2f\n", price1); // Comma as a thousand separator
+          System.out.printf("%,.2f\n", price2);
+          System.out.printf("%,.2f\n", price3);
+
+          // Zero padding and width
+          int id1 = 1;
+          int id2 = 23;
+          int id3 = 456;
+          int id4 = 7890;
+
+          System.out.println("Zero padding:");
+          System.out.printf("%04d\n", id1); // Zero-padded to 4 digits
+          System.out.printf("%04d\n", id2);
+          System.out.printf("%04d\n", id3);
+          System.out.printf("%04d\n", id4);
+
+          System.out.println("Spaces (right-aligned):");
+          System.out.printf("%4d\n", id1); // Right-aligned in 4 spaces
+          System.out.printf("%4d\n", id2);
+          System.out.printf("%4d\n", id3);
+          System.out.printf("%4d\n", id4);
+
+          System.out.println("Spaces (left-aligned):");
+          System.out.printf("%-4d\n", id1); // Left-aligned in 4 spaces
+          System.out.printf("%-4d\n", id2);
+          System.out.printf("%-4d\n", id3);
+          System.out.printf("%-4d\n", id4);
       }
   }
