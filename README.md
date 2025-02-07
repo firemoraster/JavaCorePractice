@@ -22,6 +22,10 @@ Welcome to **JavaCorePractice**! This repository is dedicated to practicing and 
 - [5. Random Numbers](#5-random-numbers)
 - [6. Math Class](#6-math-class)
 - [7. Printf](#7-printf)
+  - [7.1 Compound Interest Calculator](#71-compound-interest-calculator)
+
+
+
 
 
 
@@ -516,5 +520,60 @@ Welcome to **JavaCorePractice**! This repository is dedicated to practicing and 
           System.out.printf("%-4d\n", id2);
           System.out.printf("%-4d\n", id3);
           System.out.printf("%-4d\n", id4);
+      }
+  }
+
+
+### 7.1 Compound Interest Calculator
+- **What is a Compound Interest Calculator?**
+  - A compound interest calculator calculates the future value of an investment based on the principal amount, interest rate, number of times interest is compounded per year, and the number of years.
+  - The formula used is:  
+    **A = P × (1 + r/n)^(n×t)**  
+    Where:
+    - **A** = the future value of the investment
+    - **P** = the principal amount
+    - **r** = annual interest rate (in decimal)
+    - **n** = number of times interest is compounded per year
+    - **t** = number of years
+
+- **How It Works:**
+  1. The program uses the `Scanner` class to take user input for the principal amount, interest rate, compounding frequency, and investment duration.
+  2. It calculates the future value using the compound interest formula.
+  3. It displays the result using `printf()` for formatted output.
+
+- **Code Example:**
+  ```java
+  import java.util.Scanner;
+
+  public class CompoundInterestCalculator {
+      public static void main(String[] args) {
+          Scanner sc = new Scanner(System.in);
+
+          double principal;
+          double rate;
+          int timesCompounded;
+          int years;
+          double amount;
+
+          // User input
+          System.out.print("Enter the principal amount you would like to deposit: ");
+          principal = sc.nextDouble();
+
+          System.out.print("Enter the interest rate (in %): ");
+          rate = sc.nextDouble() / 100; // Convert percentage to decimal
+
+          System.out.print("Enter the number of times compounded per year: ");
+          timesCompounded = sc.nextInt();
+
+          System.out.print("Enter the number of years: ");
+          years = sc.nextInt();
+
+          // Calculate compound interest
+          amount = principal * Math.pow(1 + rate / timesCompounded, timesCompounded * years);
+
+          // Display the result
+          System.out.printf("The amount after %d years is %.2f", years, amount);
+
+          sc.close();
       }
   }
