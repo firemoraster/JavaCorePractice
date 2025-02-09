@@ -23,6 +23,7 @@ Welcome to **JavaCorePractice**! This repository is dedicated to practicing and 
 - [6. Math Class](#6-math-class)
 - [7. Printf](#7-printf)
   - [7.1 Compound Interest Calculator](#71-compound-interest-calculator)
+- [8. Nested If Statements](#8-nested-if-statements)
 
 
 
@@ -575,5 +576,47 @@ Welcome to **JavaCorePractice**! This repository is dedicated to practicing and 
           System.out.printf("The amount after %d years is %.2f", years, amount);
 
           sc.close();
+      }
+  }
+
+
+### 8. Nested If Statements
+- **What are Nested If Statements?**
+  - Nested if statements are used when you need to check multiple conditions within another condition.
+  - They allow you to create more complex decision-making logic by placing one `if` statement inside another.
+
+- **How It Works:**
+  1. The program checks the outer condition (e.g., whether the user is a student).
+  2. If the outer condition is true, it checks the inner condition (e.g., whether the user is a senior).
+  3. Based on the combination of conditions, it applies specific logic (e.g., discounts for students and seniors).
+
+- **Code Example:**
+  ```java
+  public class NestedIfStatements {
+      public static void main(String[] args) {
+          boolean isStudent = true;
+          boolean isSenior = true;
+          double price = 9.99;
+
+          if (isStudent) {
+              if (isSenior) {
+                  System.out.println("You get a senior discount of 20%");
+                  System.out.println("You get a student discount of 10%");
+                  price *= 0.7; // Apply both discounts (30% total)
+              } else {
+                  System.out.println("You get a student discount of 10%");
+                  price *= 0.9; // Apply student discount
+              }
+          } else {
+              if (isSenior) {
+                  System.out.println("You get a senior discount of 20%");
+                  price *= 0.8; // Apply senior discount
+              } else {
+                  System.out.println("No discounts applied.");
+                  price *= 1; // No discount
+              }
+          }
+
+          System.out.printf("The final price is: %.2f", price);
       }
   }
